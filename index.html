@@ -1112,6 +1112,66 @@
       .quiz-cta-mid-btn,
       #quiz-section .accordion-btn { font-size: 16px; padding: 14px 16px; }
     }
+
+    /* スマホのみ：最下部（相談CTA・診断CTA）のみ調整。PC・中段・FVは触らない */
+    @media (max-width: 768px) {
+      /* ①CTA間の余白を詰める（相談→注意書き→診断が連続して見えるように） */
+      #lead-form-section {
+        padding-bottom: 18px !important;
+      }
+      #lead-form-section .form-footer {
+        margin-top: 8px;
+        padding-top: 8px;
+        gap: 6px;
+      }
+      #lead-form-section .form-footer .btn {
+        margin-bottom: 0;
+      }
+      #lead-form-section .container > p:last-of-type {
+        margin-top: 6px !important;
+      }
+      #quiz-section .section-inner {
+        padding-top: 14px !important;
+        padding-bottom: 28px;
+      }
+
+      /* ②診断CTAをサブに（薄グレー・枠線・ネイビー文字・ベタ塗りやめる） */
+      #quiz-section .accordion {
+        border: 2px solid #1e293b;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+      }
+      #quiz-section .accordion-btn {
+        background: #f5f5f5 !important;
+        color: #1e293b !important;
+        border: 2px solid #1e293b;
+        box-shadow: none !important;
+        font-size: 15px;
+        padding: 14px 18px;
+        min-height: 48px;
+      }
+      #quiz-section .accordion-btn:hover {
+        background: #eee !important;
+        box-shadow: none !important;
+      }
+      #quiz-section .accordion-btn:active {
+        transform: none;
+        box-shadow: none !important;
+      }
+      #quiz-section .accordion-icon {
+        border-color: #1e293b;
+        color: #1e293b;
+        width: 18px;
+        height: 18px;
+        font-size: 10px;
+      }
+
+      /* ③診断帯を少し軽く（padding・フォント1段階下） */
+      #quiz-section .accordion-btn {
+        padding: 12px 16px;
+        font-size: 15px;
+      }
+    }
   </style>
 </head>
 <body>
