@@ -110,14 +110,18 @@
 
     .container {
       max-width: 640px;
-      margin: 0 auto;
-      padding: 0 20px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
     }
     @media (max-width: 380px) {
-      .container { padding: 0 16px; }
+      .container { padding-left: 24px; padding-right: 24px; }
     }
     @media (min-width: 768px) {
-      .container { max-width: 720px; padding: 0 24px; }
+      .container { max-width: 720px; padding-left: 24px; padding-right: 24px; }
     }
 
     /* ボタン：四角・太め・立体感・信頼色 */
@@ -278,10 +282,44 @@
       vertical-align: top;
     }
 
-    /* ①ファーストビュー：すっきり・左コピー＋右エリア */
-    .hero {
-      background: #fafafa;
+    /* ①ファーストビュー：バナー画像（PC・スマホでサイズ最適化） */
+    .hero-banner-section {
+      background: #fff;
       border-bottom: 1px solid var(--border);
+      padding: 0;
+    }
+    .hero-banner-section .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* FVバナー：画像の存在感を保ちつつテキストも読める比率に */
+    .hero-banner-img {
+      width: 100%;
+      max-width: 720px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      vertical-align: top;
+    }
+    @media (max-width: 767px) {
+      .hero-banner-section {
+        padding-bottom: 0;
+      }
+      .hero-banner-section .container {
+        max-width: 100%;
+        padding: 0 20px;
+      }
+      .hero-banner-img {
+        max-width: 100%;
+        width: 100%;
+        min-height: 320px;
+        max-height: 68vh;
+        height: auto;
+        object-fit: contain;
+        object-position: center center;
+        margin: 0 auto;
+      }
     }
     .hero-inner {
       display: flex;
@@ -1060,15 +1098,51 @@
       margin-top: 10px;
     }
 
-    /* スマホ表示の最適化 */
+    /* スマホ表示の最適化（全体の左右バランスを均一に・中央寄せ） */
     @media (max-width: 767px) {
+      .container {
+        padding-left: max(24px, env(safe-area-inset-left));
+        padding-right: max(24px, env(safe-area-inset-right));
+        margin-left: auto;
+        margin-right: auto;
+      }
+      section .container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      /* テキストブロックを中央に寄せて読みやすく（FV・CTA・フォームは除く） */
+      section:not(.hero-banner-section):not(.cta-center) .container.section-inner {
+        max-width: 360px;
+        margin-left: auto;
+        margin-right: auto;
+      }
       .section-inner { padding: 24px 0; }
       .section-title { font-size: 18px; }
       .section-title-lg { font-size: 20px; }
-      .hero-inner { padding: 16px 0 24px; }
-      .hero-title { font-size: 22px; line-height: 1.6; }
-      .hero-sub { font-size: 15px; }
-      .hero-visual { max-width: 260px; margin-bottom: 16px; }
+      .hero {
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+      }
+      .hero-inner {
+        padding: 24px 0 32px;
+        gap: 20px;
+      }
+      .hero-title { font-size: 23px; line-height: 1.6; color: #0f172a; }
+      .hero-title-accent { color: #0f172a; }
+      .hero-sub { font-size: 15px; color: #334155; }
+      .hero-visual {
+        max-width: 280px;
+        margin: 8px auto 0;
+      }
+      .hero-visual-inner {
+        border-radius: 8px;
+        border: 1px solid var(--border);
+      }
+      .hero .hero-ctas .btn {
+        border-radius: 8px;
+        font-weight: 800;
+      }
       .cta-center { padding: 24px 16px; }
       .cta-center .btn-cta-large {
         height: 56px;
@@ -1101,7 +1175,7 @@
       }
       .btn { min-height: 48px; padding: 0 20px; }
       .btn-lg { min-height: 52px; font-size: 16px; }
-      .bullet-list { padding-left: 1.2em; }
+      .bullet-list { padding-left: 0; }
       .organizer-box { padding: 20px 16px; }
       .organizer-photo-block .organizer-photo-wrap { width: 160px; height: 160px; }
       .contents-visual { margin-top: 20px; max-width: 100%; }
@@ -1192,29 +1266,10 @@
     </div>
   </header>
 
-  <!-- ①ファーストビュー：誰向け・何が得られるか一目で分かる -->
-  <section class="hero">
-    <div class="container section-inner hero-inner">
-      <div class="hero-copy">
-        <h1 class="hero-title">
-          <span class="hero-title-wrap">分院・人材・統合で悩む<br />院長へ</span><br />
-          <span class="hero-title-accent">「どうする？」の<br />判断材料が<br />得られる相談の場</span>
-        </h1>
-        <p class="hero-sub">分院を出すか、統合するか、このままでいいか。</p>
-        <p class="hero-sub">同じように悩んだ院長の事例や判断基準を聞いて、自分の次の一手を決めるための材料が得られます。</p>
-        <div class="hero-ctas">
-          <button type="button" class="btn btn-primary btn-lg btn-block" data-scroll="form">
-            無料で一度相談する
-          </button>
-          <p class="hero-cta-note">お気軽にご相談ください</p>
-        </div>
-        <p class="hero-note">※セミナー参加院長限定</p>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-visual-inner">
-          <img src="assets/hero-fv.png" alt="専門家が歯科データを共有する様子" width="400" height="300" style="width:100%;height:100%;object-fit:cover;" />
-        </div>
-      </div>
+  <!-- ①ファーストビュー：バナー画像（PC・スマホ共通） -->
+  <section class="hero hero-banner-section">
+    <div class="container hero-banner-wrap">
+      <img src="assets/hero-banner.png" alt="外部院長限定 完全クローズドの相談コミュニティ 分院か、このままか。次の一手を決める相談" class="hero-banner-img" width="1200" height="auto" />
     </div>
   </section>
 
