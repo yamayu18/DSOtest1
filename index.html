@@ -2,16 +2,16 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>DSO COMMUNITY｜相談CV獲得LP</title>
+  <title>DSO COMMUNITY｜分院か、このままか。次の一手を決める院長相談</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="分院・人材・経営に悩む院長へ。院長同士で相談できるクローズドな小規模コミュニティ。次の一手を整理する場です。"
+    content="年商1〜5億の院長向け。分院かこのままか、次の一手を決める相談。営業なし・同規模医院のリアル共有。判断材料を集める場です。"
   />
-  <meta property="og:title" content="DSO COMMUNITY｜相談CV獲得LP" />
+  <meta property="og:title" content="DSO COMMUNITY｜院長向け判断材料・相談の場" />
   <meta
     property="og:description"
-    content="分院・人材・経営に悩む院長へ。院長同士で相談できるクローズドな小規模コミュニティ。次の一手を整理する場です。"
+    content="年商1〜5億の院長向け。分院かこのままか、次の一手を決める相談。営業なし・同規模医院のリアル共有。判断材料を集める場です。"
   />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
@@ -166,6 +166,19 @@
       transform: translateY(2px);
       box-shadow: 0 2px 0 #0a0f18, 0 2px 8px rgba(0,0,0,0.15);
     }
+    /* フォーム送信CTA：立体感を強く */
+    .lead-form .btn-primary,
+    #lead-form .btn-primary {
+      height: 52px;
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      box-shadow: 0 5px 0 #0a0f18, 0 8px 20px rgba(0,0,0,0.18);
+    }
+    .lead-form .btn-primary:hover,
+    #lead-form .btn-primary:hover {
+      box-shadow: 0 5px 0 #0a0f18, 0 10px 24px rgba(0,0,0,0.22);
+    }
 
     .btn-outline {
       border: 2px solid var(--primary);
@@ -251,6 +264,64 @@
     @media (min-width: 640px) {
       .section-title-lg { font-size: 22px; }
     }
+    /* 伝えたい見出し：左アクセント＋立体感 */
+    .section-title-hero {
+      padding-left: 14px;
+      border-left: 5px solid var(--primary);
+      box-shadow: 0 1px 0 rgba(30, 41, 59, 0.06);
+    }
+    /* キーフレーズ：色味で目立たせる */
+    .key {
+      color: var(--primary);
+      font-weight: 700;
+    }
+    .key-bg {
+      display: inline;
+      padding: 2px 6px;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.08) 0%, rgba(30, 41, 59, 0.04) 100%);
+      color: var(--primary);
+      font-weight: 700;
+      border-radius: 4px;
+    }
+    /* なぜ無料・限定か：不審感を解消するブロック */
+    .why-limited-section { background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); }
+    .why-limited-box {
+      padding: 20px 20px 20px 24px;
+      background: #fff;
+      border-radius: 12px;
+      border-left: 5px solid var(--primary);
+      box-shadow: 0 4px 20px rgba(30, 41, 59, 0.08), 0 0 0 1px rgba(30, 41, 59, 0.06);
+    }
+    .why-limited-box .why-limited-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .why-limited-box .why-limited-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-main);
+      margin: 0 0 10px 0;
+      line-height: 1.45;
+    }
+    .why-limited-box .why-limited-desc {
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .why-limited-box .why-limited-desc .key { color: var(--primary); font-weight: 700; }
+
+    /* CTAエリアをより際立たせる */
+    .cta-center {
+      padding: 32px 20px;
+      background: linear-gradient(180deg, var(--primary) 0%, #152238 100%);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 8px 32px rgba(30, 41, 59, 0.25);
+    }
+    .cta-center .section-title-lg { color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,0.15); }
 
     /* コンテンツセクション：左テキスト＋右画像 */
     .contents-row {
@@ -280,6 +351,47 @@
       height: auto;
       display: block;
       vertical-align: top;
+    }
+
+    /* コミュニティ：左テキスト＋右画像（画像やや小さめ）、行間詰めて配分を整える */
+    .community-section .container { max-width: 720px; }
+    .community-section .contents-row {
+      align-items: center;
+      gap: 28px;
+    }
+    .community-section .contents-visual {
+      margin-top: 0;
+      max-width: 280px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: none;
+      box-shadow: 0 12px 40px rgba(30, 41, 59, 0.12), 0 0 0 1px rgba(30, 41, 59, 0.06);
+    }
+    .community-section .contents-visual img {
+      width: 100%;
+      display: block;
+    }
+    .community-section .lp-text { line-height: 1.45; }
+    .community-intro { margin-bottom: 8px; }
+    .community-items { display: flex; flex-direction: column; gap: 8px; }
+    .community-item {
+      padding: 12px 14px;
+      background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+      border-left: 4px solid var(--primary);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .community-item:hover {
+      box-shadow: 0 4px 16px rgba(30, 41, 59, 0.08);
+      border-color: rgba(30, 41, 59, 0.15);
+    }
+    .community-item .label { font-weight: 700; color: var(--primary); display: block; margin-bottom: 2px; font-size: 14px; }
+    .community-item .desc { color: var(--text-sub); font-size: 13px; line-height: 1.4; }
+    @media (max-width: 767px) {
+      .community-section .contents-visual { margin-top: 24px; max-width: 100%; }
     }
 
     /* ①ファーストビュー：バナー画像（PC・スマホでサイズ最適化） */
@@ -451,32 +563,28 @@
       color: var(--muted);
       line-height: 1.5;
     }
-    .cta-center {
-      padding: 28px 20px;
-      background: var(--primary);
-      border: none;
-    }
     .cta-center .btn-cta-large {
       width: 100%;
       max-width: 400px;
       margin: 0 auto;
       display: block;
-      height: 58px;
+      height: 60px;
       font-size: 18px;
       font-weight: 800;
       letter-spacing: 0.08em;
-      background: linear-gradient(180deg, #fff 0%, #f0f0f0 100%);
+      background: linear-gradient(180deg, #ffffff 0%, #e8ecf0 100%);
       color: var(--primary);
-      box-shadow: 0 5px 0 #cbd5e1, 0 8px 20px rgba(0,0,0,0.2);
-      text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+      border: 2px solid rgba(255,255,255,0.9);
+      box-shadow: 0 6px 0 #94a3b8, 0 10px 28px rgba(0,0,0,0.25);
+      text-shadow: 0 1px 0 rgba(255,255,255,0.95);
     }
     .cta-center .btn-cta-large:hover {
-      background: linear-gradient(180deg, #fff 0%, #e5e5e5 100%);
-      box-shadow: 0 5px 0 #cbd5e1, 0 10px 24px rgba(0,0,0,0.25);
+      background: linear-gradient(180deg, #fff 0%, #dfe4eb 100%);
+      box-shadow: 0 6px 0 #94a3b8, 0 12px 32px rgba(0,0,0,0.3);
     }
     .cta-center .btn-cta-large:active {
-      transform: translateY(3px);
-      box-shadow: 0 2px 0 #cbd5e1, 0 4px 12px rgba(0,0,0,0.15);
+      transform: translateY(4px);
+      box-shadow: 0 2px 0 #94a3b8, 0 4px 14px rgba(0,0,0,0.2);
     }
 
     /* Cards & layout */
@@ -582,6 +690,68 @@
       font-weight: 700;
     }
     .check-box-item span { flex: 1; }
+
+    /* 相談で整理できること：4つをコンパクトに */
+    .outcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 12px;
+      margin-top: 14px;
+    }
+    .outcome-item {
+      padding: 12px 14px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+    .outcome-item .label { font-weight: 700; color: var(--primary); display: block; margin-bottom: 2px; }
+    .outcome-item .desc { color: var(--text-sub); }
+    @media (max-width: 480px) {
+      .outcome-grid { grid-template-columns: 1fr; }
+    }
+
+    /* 他との違い：コンサル・DSO仲介・M&Aと私たちを並べて比較 */
+    .diff-intro { margin-top: 8px; font-size: 14px; color: var(--text-sub); margin-bottom: 14px; }
+    .diff-compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .diff-other {
+      padding: 12px 14px;
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    .diff-other .diff-other-label { font-weight: 700; color: var(--muted); display: block; margin-bottom: 4px; font-size: 12px; }
+    .diff-other .diff-other-desc { color: var(--text-sub); }
+    .diff-us-wrap { margin-top: 16px; }
+    .diff-us {
+      padding: 16px 18px;
+      background: linear-gradient(135deg, #f0f4ff 0%, #e8eef8 100%);
+      border: 2px solid var(--primary);
+      border-radius: 10px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .diff-us .diff-us-label { font-weight: 700; color: var(--primary); display: block; margin-bottom: 8px; font-size: 15px; }
+    .diff-us .diff-us-list { margin: 0; padding: 0; list-style: none; }
+    .diff-us .diff-us-list li { position: relative; padding-left: 1.2em; margin-top: 4px; }
+    .diff-us .diff-us-list li::before { content: "◎"; position: absolute; left: 0; font-weight: 700; color: var(--primary); }
+    .diff-us .diff-us-note { margin-top: 10px; font-weight: 600; color: var(--text-main); font-size: 14px; }
+    @media (max-width: 640px) {
+      .diff-compare { grid-template-columns: 1fr; }
+    }
+
+    /* 相談テーマ：行間詰めて一覧に */
+    .theme-list { margin-top: 10px; }
+    .theme-list li { margin-top: 4px; font-size: 14px; padding: 6px 0; border-bottom: 1px solid var(--border); line-height: 1.45; }
+    .theme-list li:last-child { border-bottom: none; }
 
     /* Organizer：写真とテキストを分けて、写真を大きく信頼感を出す */
     .organizer-box {
@@ -1256,7 +1426,7 @@
     <div class="container header-inner">
       <div>
         <div class="header-brand-top">DSO COMMUNITY</div>
-        <div class="header-brand-sub">外部院長向けコミュニティサロン</div>
+        <div class="header-brand-sub">院長限定・判断材料を集める相談の場</div>
       </div>
       <div class="header-cta">
         <button type="button" class="btn btn-primary btn-sm" data-scroll="form">
@@ -1266,90 +1436,89 @@
     </div>
   </header>
 
-  <!-- ①ファーストビュー：バナー画像（PC・スマホ共通） -->
+  <!-- ①ファーストビュー：バナー＋メッセージ（3秒で自分向けと分かる） -->
   <section class="hero hero-banner-section">
     <div class="container hero-banner-wrap">
       <img src="assets/hero-banner.png" alt="外部院長限定 完全クローズドの相談コミュニティ 分院か、このままか。次の一手を決める相談" class="hero-banner-img" width="1200" height="auto" />
     </div>
   </section>
 
-  <!-- ②共感 -->
+  <!-- ②こんな院長向け（共感・刺さる） -->
   <section style="background:#fff;">
     <div class="container section-inner">
-      <h2 class="section-title section-title-lg">こんな院長が、相談しています</h2>
+      <h2 class="section-title section-title-lg section-title-hero">「<span class="key">判断材料が足りない</span>」と感じていませんか？</h2>
+      <p class="lp-text" style="margin-top:12px;font-size:15px;color:var(--text-sub);">年商1〜5億の院長の多くが、同じ壁にぶつかっています。</p>
       <ul class="check-box-list" style="margin-top:14px;">
-        <li class="check-box-item"><span>分院を出すか迷っている</span></li>
-        <li class="check-box-item"><span>相談できる相手がいない</span></li>
-        <li class="check-box-item"><span>人材が不安</span></li>
-        <li class="check-box-item"><span>統合提案が来ている</span></li>
-        <li class="check-box-item"><span>このままでいいか不安</span></li>
+        <li class="check-box-item"><span>分院を出すか、このままでいいか、決めきれない</span></li>
+        <li class="check-box-item"><span>採用が回らず、拡大が止まっている</span></li>
+        <li class="check-box-item"><span>幹部が育たない。誰に何を任せるか見えない</span></li>
+        <li class="check-box-item"><span>統合・提携の話が来たが、数字で比較したい</span></li>
+        <li class="check-box-item"><span>相談できる相手がいない。営業は頼りたくない</span></li>
       </ul>
+      <p class="lp-text" style="margin-top:18px;font-size:15px;color:var(--text-main);font-weight:700;">1つでも当てはまるなら、ここで<span class="key-bg">判断材料を揃えられます</span>。</p>
     </div>
   </section>
 
-  <!-- ③相談内容 -->
+  <!-- ③相談で整理できること（4ブロックで一覧） -->
   <section style="background:var(--bg-gray);">
     <div class="container section-inner">
-      <h2 class="section-title section-title-lg">よくある相談テーマ</h2>
-      <ul class="bullet-list" style="margin-top:12px;">
-        <li class="bullet-item"><span class="bullet-dot"></span><span>分院をいつ・どこに出すべきか迷っている</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>採用がうまくいかず、人手が足りない</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>次世代の幹部・院長候補をどう育てるか</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>提携・統合を選ぶべきか判断に悩んでいる</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>医院の今後10年をどう描くか決めたい</span></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ④相談で分かること -->
-  <section style="background:#fff;">
-    <div class="container section-inner">
-      <h2 class="section-title section-title-lg">相談すると、ここがクリアになる</h2>
-      <ul class="bullet-list" style="margin-top:12px;">
-        <li class="bullet-item"><span class="bullet-dot"></span><span>分院を出すべきか、今がタイミングかどうか</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>組織をどう整えれば生産性が上がるか</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>利益をどうつくり、残していくか</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>統合する場合の考え方・進め方</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>他院は実際にどう判断・実行しているか</span></li>
-        <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>次の10年をどうするかの方向性</span></li>
-      </ul>
-      <p class="lp-text" style="margin-top:14px;font-size:14px;color:var(--text-sub);">営業ではなく、状況を整理する場です。</p>
-    </div>
-  </section>
-
-  <!-- ⑤中央CTA -->
-  <section id="cta-mid" class="cta-center">
-    <div class="container" style="text-align:center;">
-      <button type="button" class="btn btn-cta-large" data-scroll="form">無料で一度相談する</button>
-    </div>
-  </section>
-
-  <!-- ⑤-2 3分診断（途中の導線） -->
-  <section class="quiz-cta-mid" style="background:var(--bg-gray);padding:0 0 24px;">
-    <div class="container">
-      <div class="quiz-cta-mid-inner">
-        <button type="button" class="quiz-cta-mid-btn" id="quiz-cta-mid-btn" data-scroll="quiz-section" data-quiz-open="true" aria-label="院長向け 3分診断を受ける">
-          <span>院長向け 3分診断を受ける（クリックで表示）</span>
-          <span class="accordion-icon">▼</span>
-        </button>
+      <h2 class="section-title section-title-lg section-title-hero">相談コミュニティに入ると、ここまで整理できます</h2>
+      <p class="lp-text" style="margin-top:4px;font-size:14px;color:var(--text-sub);">同規模医院の数字と事例で。<span class="key-bg">営業トークではありません</span>。</p>
+      <div class="outcome-grid">
+        <div class="outcome-item"><span class="label">分院</span><span class="desc">今出すか・条件・成功・失敗の基準が分かる</span></div>
+        <div class="outcome-item"><span class="label">組織・利益</span><span class="desc">生産性と利益の残し方の具体例が分かる</span></div>
+        <div class="outcome-item"><span class="label">統合・提携</span><span class="desc">進め方と他院の判断・実行のリアルが聞ける</span></div>
+        <div class="outcome-item"><span class="label">次の10年</span><span class="desc">方向性を決める材料が揃う</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ⑥コミュニティ説明 -->
+  <!-- ④他との違い（×と◎をコンパクトに） -->
   <section style="background:#fff;">
     <div class="container section-inner">
-      <h2 class="section-title section-title-lg">コミュニティについて</h2>
-      <p class="lp-text" style="margin-top:10px;font-size:14px;color:var(--text-sub);">院長同士が安心して話し合えるクローズドな場です。セミナー参加院長限定。</p>
-      <p class="lp-text" style="margin-top:8px;font-size:14px;color:var(--text-sub);">院内共有・意思決定に使える資料あり。営業・勧誘は禁止です。</p>
-      <ul class="bullet-list" style="margin-top:10px;">
-        <li class="bullet-item"><span class="bullet-dot"></span><span>院長向けサマリー資料</span></li>
-        <li class="bullet-item" style="margin-top:4px;"><span class="bullet-dot"></span><span>院内共有チェックシート（PDF）</span></li>
-        <li class="bullet-item" style="margin-top:4px;"><span class="bullet-dot"></span><span>3分診断の結果レポート</span></li>
+      <h2 class="section-title section-title-lg section-title-hero">コンサル・M&A会社との違い</h2>
+      <p class="diff-intro">よくある相談先は「売る前提」や「一般論」になりがち。私たちの場は、そこからあえて絞っています。</p>
+      <div class="diff-compare">
+        <div class="diff-other">
+          <span class="diff-other-label">コンサル</span>
+          <span class="diff-other-desc">ノウハウ・手法の提供が中心。一般論になりやすく、営業につながりがち。</span>
+        </div>
+        <div class="diff-other">
+          <span class="diff-other-label">M&A会社</span>
+          <span class="diff-other-desc">売却・譲渡が前提。大口・多店舗向けの話になりがち。</span>
+        </div>
+      </div>
+      <div class="diff-us-wrap">
+        <div class="diff-us">
+          <span class="diff-us-label">私たちの場</span>
+          <ul class="diff-us-list">
+            <li>院長同士のリアルな共有</li>
+            <li>数字・事例ベースで判断材料を揃える</li>
+            <li>営業・勧誘なし</li>
+            <li>同規模医院に限定</li>
+          </ul>
+          <p class="diff-us-note">「売る場」ではなく、<span class="key">「判断材料を集める場」</span>だけに絞っています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑤よくある相談テーマ（1行で前提・リストはコンパクトに） -->
+  <section style="background:var(--bg-gray);">
+    <div class="container section-inner">
+      <h2 class="section-title section-title-lg">よくある相談テーマ</h2>
+      <p class="lp-text" style="margin-top:6px;font-size:14px;color:var(--text-sub);">セミナー参加院長向けコミュニティの入口として<span class="key">無料相談</span>を実施しています（<span class="key-bg">営業なし</span>）。</p>
+      <ul class="bullet-list theme-list">
+        <li class="bullet-item"><span class="bullet-dot"></span><span>分院をいつ・どこに出すべきか迷っている</span></li>
+        <li class="bullet-item"><span class="bullet-dot"></span><span>採用がうまくいかず、人手が足りない</span></li>
+        <li class="bullet-item"><span class="bullet-dot"></span><span>次世代の幹部・院長候補をどう育てるか</span></li>
+        <li class="bullet-item"><span class="bullet-dot"></span><span>提携・統合を選ぶべきか判断に悩んでいる</span></li>
+        <li class="bullet-item"><span class="bullet-dot"></span><span>医院の今後10年をどう描くか決めたい</span></li>
       </ul>
     </div>
   </section>
 
+  <!-- ⑥理事長紹介（信頼） -->
   <section style="background:var(--bg-gray);" aria-label="理事長紹介">
     <div class="container section-inner">
       <h2 class="section-title section-title-lg">理事長紹介</h2>
@@ -1372,17 +1541,32 @@
     </div>
   </section>
 
-  <section style="background:#fff;" aria-label="コンテンツ">
+  <!-- ⑦コミュニティ内容（左テキスト＋右画像・デザイン強化） -->
+  <section class="community-section" style="background:linear-gradient(180deg, #fff 0%, #fafbff 100%);" aria-label="コミュニティ内容">
     <div class="container section-inner">
       <div class="contents-row">
         <div class="contents-copy">
-          <h2 class="section-title section-title-lg">コンテンツ</h2>
-          <ul class="bullet-list" style="margin-top:12px;">
-            <li class="bullet-item"><span class="bullet-dot"></span><span>月1回の動画配信</span></li>
-            <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>出店・統合検討用テンプレート</span></li>
-            <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>実際のケース共有（成功/失敗・統合後のリアル）</span></li>
-            <li class="bullet-item" style="margin-top:6px;"><span class="bullet-dot"></span><span>希望者のみ個別相談・ケースディスカッション</span></li>
-          </ul>
+          <h2 class="section-title section-title-lg section-title-hero">コミュニティについて</h2>
+          <p class="lp-text community-intro" style="font-size:15px;color:var(--text-main);">セミナーに参加した院長だけが入れる、クローズドな場です。院長同士で安心して話し合え、営業・勧誘は一切ありません。</p>
+          <p class="lp-text" style="margin-top:2px;font-size:14px;color:var(--text-sub);">中では、次のようなことをしています。</p>
+          <div class="community-items" style="margin-top:10px;">
+            <div class="community-item">
+              <span class="label">月1回の動画配信</span>
+              <span class="desc">経営判断や分院・統合の考え方を解説する動画。毎月1本配信で、過去分も視聴できます。</span>
+            </div>
+            <div class="community-item">
+              <span class="label">分院・統合検討用テンプレート</span>
+              <span class="desc">「分院を出すか」「統合条件を比べるか」を整理するときのチェックシート。数字を埋めて、院内で判断材料として使えます。</span>
+            </div>
+            <div class="community-item">
+              <span class="label">実際のケース共有</span>
+              <span class="desc">参加院長や運営が、成功・失敗や統合後の実態を匿名で共有。他院のリアルを参考にできます。</span>
+            </div>
+            <div class="community-item">
+              <span class="label">希望者のみ個別相談・ケースディスカッション</span>
+              <span class="desc">自分の医院の数字や状況を持ち込んで、分院・統合の選択肢を一緒に整理できます。希望者のみ。</span>
+            </div>
+          </div>
         </div>
         <div class="contents-visual" aria-hidden="true">
           <img src="assets/contents-visual.png" alt="知識とテクノロジーがつながるイメージ" width="360" height="auto" />
@@ -1391,26 +1575,52 @@
     </div>
   </section>
 
-  <section style="background:#fff;" aria-label="対象院長">
+  <!-- 誰向けか（ペルソナ一言） -->
+  <section style="background:var(--bg-gray);" aria-label="対象院長">
     <div class="container section-inner">
-      <h2 class="section-title section-title-lg">対象となる院長</h2>
-      <p class="lp-text" style="margin-top:12px;font-size:15px;color:var(--text-sub);">単院の生産性向上、分院の判断材料が欲しい、提携・統合を比較検討したい、次の10年を整理したい方。</p>
-      <p class="lp-text" style="margin-top:10px;font-size:14px;color:var(--muted);">売却価格のみ重視、スタッフ・カルテに無関心、強い営業前提の場を求める方には不向きです。</p>
+      <h2 class="section-title section-title-lg section-title-hero">こんな院長のための場です</h2>
+      <p class="lp-text" style="margin-top:12px;font-size:15px;color:var(--text-main);font-weight:600;">年商1〜5億で、<span class="key-bg">「判断したいが、材料が足りない」</span>と感じている院長。</p>
+      <p class="lp-text" style="margin-top:8px;font-size:14px;color:var(--text-sub);">売却価格だけ知りたい、営業されたい、丸投げしたい方には向いていません。</p>
     </div>
   </section>
 
-  <!-- ⑦得られること -->
-  <section style="background:var(--bg-gray);">
+  <!-- 相談に来ると、こう変わる（ベネフィット具体） -->
+  <section style="background:#fff;">
     <div class="container section-inner">
-      <h2 class="section-title section-title-lg">得られること</h2>
+      <h2 class="section-title section-title-lg section-title-hero">相談に来ると、手に入るもの</h2>
       <ul class="check-box-list" style="margin-top:12px;">
-        <li class="check-box-item"><span>同規模医院の意思決定が分かる</span></li>
-        <li class="check-box-item"><span>分院判断基準が分かる</span></li>
-        <li class="check-box-item"><span>統合のリアルが分かる</span></li>
-        <li class="check-box-item"><span>幹部共有資料が手に入る</span></li>
-        <li class="check-box-item"><span>相談できる場所ができる</span></li>
-        <li class="check-box-item"><span>営業されない安心感</span></li>
+        <li class="check-box-item"><span>分院の成功・失敗基準が分かる</span></li>
+        <li class="check-box-item"><span>統合した医院のリアルが聞ける</span></li>
+        <li class="check-box-item"><span>数字ベースで判断できる材料が揃う</span></li>
+        <li class="check-box-item"><span>幹部共有用の資料が手に入る</span></li>
+        <li class="check-box-item"><span>営業されない相談先が1つできる</span></li>
       </ul>
+      <p class="lp-text" style="margin-top:20px;font-size:15px;color:var(--text-main);line-height:1.65;">判断材料が揃えば、「分院するか・このままか」を自分で決めやすくなります。<span class="key">まずは話を聞くだけでも大丈夫。</span><span class="key-bg">営業は一切しません</span>。</p>
+    </div>
+  </section>
+
+  <!-- なぜ無料・限定か（不審感を解消・CTA直前で納得を） -->
+  <section class="why-limited-section" aria-label="なぜ無料で限定なのか">
+    <div class="container section-inner">
+      <div class="why-limited-box">
+        <span class="why-limited-label">なぜ無料で、限定にしているのか</span>
+        <h3 class="why-limited-title">セミナーで私たちに興味を持ってくださった方に、あなただけに届けたいから。</h3>
+        <p class="why-limited-desc">コミュニティを<span class="key">活性化</span>し、院長同士が本当に役立つ場にしていきたい。だから人数を絞り、セミナーからつながりのある方にだけお声がけしています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⑧CTA（クロージング：いきなりボタンにしない） -->
+  <section id="cta-mid" class="cta-center" style="padding:28px 20px;">
+    <div class="container" style="text-align:center;max-width:400px;margin:0 auto;">
+      <p style="color:rgba(255,255,255,0.95);font-size:14px;margin:0 0 8px 0;">話を聞くだけ・質問だけでも歓迎です。</p>
+      <h2 class="section-title section-title-lg" style="color:#fff;margin-bottom:16px;text-shadow:0 1px 2px rgba(0,0,0,0.2);">判断材料を揃えに、<strong style="font-weight:800;">相談から</strong></h2>
+      <button type="button" class="btn btn-cta-large" data-scroll="form">無料で相談する</button>
+      <div class="cta-or" style="margin:16px 0;font-size:13px;color:rgba(255,255,255,0.9);">または</div>
+      <button type="button" class="quiz-cta-mid-btn" style="background:#fff;color:#1e293b;border:2px solid #1e293b;width:100%;padding:14px 20px;font-size:15px;font-weight:700;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;margin:0 auto;" id="quiz-cta-mid-btn" data-scroll="quiz-section" data-quiz-open="true" aria-label="院長向け 3分診断を受ける">
+        <span>院長向け 3分診断を受ける</span>
+        <span class="accordion-icon" style="border-color:#1e293b;color:#1e293b;">▼</span>
+      </button>
     </div>
   </section>
 
@@ -1467,21 +1677,12 @@
     </div>
   </section>
 
-  <!-- ⑧最後CTA -->
-  <section id="cta-bottom" style="background:#fff;padding:28px 20px;border-bottom:1px solid var(--border);">
-    <div class="container" style="max-width:400px;margin:0 auto;text-align:center;">
-      <h2 class="section-title section-title-lg">まずは相談から</h2>
-      <p class="lp-text" style="margin-top:6px;font-size:14px;color:var(--text-sub);">話を聞くだけでも大丈夫です。</p>
-      <button type="button" class="btn btn-primary btn-lg btn-block" data-scroll="form" style="margin-top:16px;">無料で相談する</button>
-    </div>
-  </section>
-
-  <!-- Lead Form -->
+  <!-- 無料相談・お申し込み -->
   <section id="lead-form-section" style="background:#fff;padding-bottom:36px;">
     <div class="container section-inner">
       <div>
         <h2 class="section-title section-title-lg">無料相談・お申し込み</h2>
-        <p class="lp-text" style="margin-top:8px;font-size:14px;color:var(--text-sub);">氏名・連絡先のみでお申し込みいただけます。</p>
+        <p class="lp-text" style="margin-top:8px;font-size:14px;color:var(--text-sub);">話を聞くだけでも大丈夫です。氏名・連絡先のみで申し込めます。</p>
       </div>
 
       <form id="lead-form" class="form-wrapper" novalidate>
@@ -1725,7 +1926,7 @@
         title: "中で提供しているコンテンツ",
         points: [
           "月1回の動画配信",
-          "出店計画・統合検討時に使えるテンプレート類",
+          "分院計画・統合検討時に使えるテンプレート類",
           "実際のケース共有（成功/失敗・統合後のリアル）",
           "希望者のみの個別相談・ケースディスカッション"
         ]
@@ -1787,11 +1988,11 @@
         title: "分院展開タイプ",
         summary: "単院の基盤が一定整っており、分院展開による成長を検討するタイミングです。",
         actions: [
-          "出店候補エリアと採用・育成の見通しを整理する",
+          "分院候補エリアと採用・育成の見通しを整理する",
           "本院側の体制（幹部・マネージャー）の役割分担を設計する",
           "分院展開と将来の提携・統合の選択肢をセットで検討する"
         ],
-        ctaLabel: "分院出店計画テンプレートを受け取る"
+        ctaLabel: "分院計画テンプレートを受け取る"
       },
       C: {
         title: "提携・統合適合タイプ",
@@ -2059,7 +2260,7 @@
             scores: { A: 2, B: 1, C: 0 }
           },
           {
-            label: "分院展開の失敗・成功事例や出店判断の基準",
+            label: "分院展開の失敗・成功事例や分院判断の基準",
             value: "multi-info",
             scores: { A: 0, B: 2, C: 1 }
           },
